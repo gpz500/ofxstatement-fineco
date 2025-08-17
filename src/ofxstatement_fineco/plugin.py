@@ -224,11 +224,11 @@ class FinecoStatementParser(StatementParser[str]):
 
         if self.cur_tpl == "savings":
             if row[2]:
-                income = int(row[2])
+                income = row[2]
                 outcome = 0
                 stmt_line.trntype = "CREDIT"
             elif row[3]:
-                outcome = int(row[3])
+                outcome = row[3]
                 income = 0
                 stmt_line.trntype = "DEBIT"
 
